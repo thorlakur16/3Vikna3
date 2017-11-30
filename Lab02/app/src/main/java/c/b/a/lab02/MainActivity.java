@@ -7,8 +7,8 @@ import android.util.Log;
 
 public class MainActivity extends AppCompatActivity {
 
-    float movespeed_X = 0.015f;
-    float movespeed_Y = 0.02f;
+    float movespeed_X = 0.05f;
+    float movespeed_Y = 0.05f;
 
     boolean gameOn = true;
 

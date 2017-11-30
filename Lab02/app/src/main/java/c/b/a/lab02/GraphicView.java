@@ -12,7 +12,7 @@ public class GraphicView extends View {
     public GraphicView (Context context , @Nullable AttributeSet attrs) {
         super ( context ,attrs);
         paint = new Paint();
-        paint . setARGB (255 , 0 /* R */ , 255 /* G */ , 0 /* B */);
+        paint . setARGB (255 , 153 /* R */ , 50 /* G */ , 204 /* B */);
         paint . setStyle ( Paint . Style . FILL_AND_STROKE );
     }
     @Override
