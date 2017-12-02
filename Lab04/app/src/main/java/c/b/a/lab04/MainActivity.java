@@ -65,6 +65,9 @@ public class MainActivity extends AppCompatActivity {
                             JSONArray definitionsArr = sensesArr.getJSONObject(0).getJSONArray("definitions");
                             String definition = definitionsArr.getString(0);
                             display.setText(definition);
+                            if(translation != ""){
+                                translate();
+                            }
                         } catch (JSONException e1) {
                             e1.printStackTrace();
                         }
@@ -75,12 +78,10 @@ public class MainActivity extends AppCompatActivity {
 
     public void setLangGer() {
         translation = "/translations=de";
-        translate();
     }
 
     public void setLangSp() {
         translation = "/translations=es";
-        translate();
     }
 
     public void translate() {

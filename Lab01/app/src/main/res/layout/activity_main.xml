@@ -8,15 +8,17 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="25dp">
 
         <EditText
             android:id="@+id/number_1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
-            android:layout_marginTop="17dp"
+            android:layout_marginTop="19dp"
+            android:layout_toEndOf="@+id/nr1"
             android:ems="10"
             android:inputType="numberDecimal" />
 
@@ -24,9 +26,9 @@
             android:id="@+id/number_2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
             android:layout_below="@+id/number_1"
-            android:layout_marginTop="14dp"
+            android:layout_marginTop="13dp"
+            android:layout_toEndOf="@+id/answertext"
             android:ems="10"
             android:inputType="numberDecimal" />
 
@@ -37,8 +39,8 @@
             android:layout_alignParentStart="true"
             android:layout_below="@+id/number_2"
             android:layout_marginTop="15dp"
-            android:text="+"
-            android:onClick="addNumbers"/>
+            android:onClick="addNumbers"
+            android:text="@string/plus" />
 
         <Button
             android:id="@+id/minus"
@@ -47,8 +49,8 @@
             android:layout_alignBaseline="@+id/plus"
             android:layout_alignBottom="@+id/plus"
             android:layout_toEndOf="@+id/plus"
-            android:text="-"
-            android:onClick="subtractNumbers" />
+            android:onClick="subtractNumbers"
+            android:text="@string/minus" />
 
         <Button
             android:id="@+id/multiply"
@@ -57,8 +59,8 @@
             android:layout_alignBaseline="@+id/minus"
             android:layout_alignBottom="@+id/minus"
             android:layout_toEndOf="@+id/minus"
-            android:text="*"
-            android:onClick="multiplyNumbers" />
+            android:onClick="multiplyNumbers"
+            android:text="@string/multiply" />
 
         <Button
             android:id="@+id/divide"
@@ -66,16 +68,16 @@
             android:layout_height="wrap_content"
             android:layout_above="@+id/answer"
             android:layout_toEndOf="@+id/multiply"
-            android:text="/"
-            android:onClick="divideNumbers" />
+            android:onClick="divideNumbers"
+            android:text="@string/divide" />
 
         <EditText
             android:id="@+id/answer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_below="@+id/plus"
-            android:layout_marginTop="24dp"
+            android:layout_alignStart="@+id/number_1"
+            android:layout_below="@+id/minus"
+            android:layout_marginTop="25dp"
             android:ems="10"
             android:inputType="numberDecimal" />
 
@@ -83,10 +85,42 @@
             android:id="@+id/clear"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignBottom="@+id/number_1"
-            android:layout_toEndOf="@+id/multiply"
+            android:layout_below="@+id/answer"
+            android:layout_marginTop="27dp"
+            android:layout_toEndOf="@+id/answertext"
             android:onClick="clear"
             android:text="clear" />
+
+        <TextView
+            android:id="@+id/answertext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/answer"
+            android:layout_alignBottom="@+id/answer"
+            android:layout_toStartOf="@+id/answer"
+            android:text="@string/answer"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/nr1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/number_1"
+            android:layout_alignBottom="@+id/number_1"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="13dp"
+            android:text="@string/number_1"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/nr2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/number_2"
+            android:layout_alignBottom="@+id/number_2"
+            android:layout_toStartOf="@+id/number_2"
+            android:text="@string/number_2"
+            android:textSize="20sp" />
 
     </RelativeLayout>
 

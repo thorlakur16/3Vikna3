@@ -95,7 +95,13 @@ public class MainActivity extends AppCompatActivity {
         EditText Number_2 = findViewById(R.id.number_2);
         String k = Number_2.getText().toString();
         int check = checkEmpty(n,k);
-        if(check == 1) {
+        if(Double.valueOf(k) == 0){
+            CharSequence text = "Err... cannot divide by zero!";
+            int duration = Toast.LENGTH_SHORT;
+            Toast toast = Toast.makeText(getApplicationContext(),text, duration);
+            toast.show();
+        }
+        else if(check == 1) {
             double double_n = Double.valueOf(n);
             double double_k = Double.valueOf(k);
             double ans = double_n / double_k;
